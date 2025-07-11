@@ -4,8 +4,17 @@ import Navbar from '../components/navbar'
 import CarCard from '../components/carcard'
 import { client } from '@/sanity/lib/client'
 
+type Car = {
+  _id: string;
+  name: string;
+  brand: string;
+  image: string;
+  pricePerDay: number;
+  available: boolean;
+};
+
 export default function Cars() {
-  const [cars, setCars] = useState([])
+  const [cars, setCars] = useState<Car[]>([])
 
   useEffect(() => {
     const fetchCars = async () => {
