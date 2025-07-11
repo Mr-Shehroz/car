@@ -32,7 +32,7 @@ export default {
     {
       name: 'carPriceperDay',
       title: 'Price per Day ($)',
-      type: 'number',
+      type: 'string',
       validation: (Rule: Rule) => Rule.required().min(1)
     },
     {
